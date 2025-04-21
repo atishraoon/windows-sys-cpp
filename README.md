@@ -64,6 +64,9 @@ sys [command] [arguments]
 - The tool is intended for **Windows** only.
 - Run the program as **Administrator** for full functionality.
 
+## upcoming update 
+- make windows fast just with one command.
+
 ## License
 This project is licensed under the **MIT License**.
 
