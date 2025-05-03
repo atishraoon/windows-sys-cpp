@@ -65,7 +65,7 @@ sys [command] [arguments]
 - Run the program as **Administrator** for full functionality.
 
 ## upcoming update 
-- make windows fast just with one command.
+- adding deblote script. 
 
 ## License
 This project is licensed under the **MIT License**.
