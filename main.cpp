@@ -6,16 +6,26 @@
 
 using namespace std;
 
-void usage() {
+void usage(const string &program_name) {
     system("cls");
-    cout << "\n    sys [shutdown sh|re [seconds] ][bios][..]\n";
-    cout << "    re       : restart\n";
-    cout << "    clean    : clean all temp files\n";
-    cout << "    hide     : hide file or folder. hide [path | h_ps]\n";
-    cout << "    uhide    : unhide the file and folder. uhide [path | uh_ps]\n";
-    cout << "    password : to change the sys password \n";
-    exit(0);
-}
+    cout << "\nUsage: " << program_name << " <command> [options] [sh][re][-v][-h]" << endl;
+    cout << "Commands:" << endl;
+    cout << "  sh\t\tshutdown system you can also pass [time_in_seconds]." << endl;
+    cout << "  re\t\trestart system you can also pass [time_in_seconds]." << endl;
+    cout << "  bios\t\topen bios after restart [time_in_seconds]." << endl;
+    cout << "  clean \tremove all junk files from system." << endl;
+    cout << "  hide \t\t[folder/file] hide file and folder." << endl;
+    cout << "  uhide \t[folder/file] hide file and folder." << endl;
+    cout << "  password \tto change the current user passwords" << endl;
+    cout << "  h_ps \t\thide file and folder path store in data.dat file." << endl;
+    cout << "  uh_ps \thide file and folder path store in data.dat file." << endl;
+    cout << "  debloot \tdebloot script will execute" << endl;
+    cout << "\nOptions:" << endl;
+    cout << "  -v, --verbose\tversion of this program." << endl;
+    cout << "  -h, --help\tShow help for a specific command." << endl;
+
+    exit(0); 
+}  
 
 void hide(const string &path) {
     if (GetFileAttributes(path.c_str()) == INVALID_FILE_ATTRIBUTES) {
@@ -110,7 +120,7 @@ void change_password() {
 
 int main(int argc, char *argv[]) {
     if (argc < 2) {
-        usage();
+        usage(argv[0]);
     }
 
     string command = argv[1];
@@ -133,8 +143,15 @@ int main(int argc, char *argv[]) {
         clean();
     } else if (command == "password") {
         change_password();
-    } else {
-        cout << "Unexpected argument" << endl;
+    }else if (command == "debloot") {
+        system("powershell -Command \"irm 'https://christitus.com/win' | iex\"");
+    }else if (command == "-v" || command == "--version") {
+        cout << "version 0.1.1" << endl;
+    }
+    else {
+        cerr << "Error: Unknown command '" << command << "'" << endl;
+        usage(argv[0]);
+        return 1;
     }
     return 0;
 }
