@@ -65,7 +65,8 @@ sys [command] [arguments]
 - Run the program as **Administrator** for full functionality.
 
 ## upcoming update 
-- encrypt or decrypt file and folders . 
+- encrypt or decrypt file and folders .
+- not need to create file data.dat file manully. 
 
 ## License
 This project is licensed under the **MIT License**.
