@@ -65,7 +65,7 @@ sys [command] [arguments]
 - Run the program as **Administrator** for full functionality.
 
 ## upcoming update 
-- adding deblote script. 
+- encrypt or decrypt file and folders . 
 
 ## License
 This project is licensed under the **MIT License**.
