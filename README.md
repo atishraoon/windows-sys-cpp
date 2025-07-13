@@ -64,6 +64,8 @@ sys [command] [arguments]
 ## Notes
 - The tool is intended for **Windows** only.
 - Run the program as **Administrator** for full functionality.
+- In first release of this program it do not have features like:
+  - performance command 
 
 ## upcoming update 
 - encrypt or decrypt file and folders .
