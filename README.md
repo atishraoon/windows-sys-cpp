@@ -11,6 +11,7 @@ The **System Utility Tool** is a command-line program for Windows that provides 
   - Bulk hide/unhide using a `data.dat` file.
 - **System Cleanup**: Remove temporary and prefetch files to free up space.
 - **Password Management**: Change the system user password directly from the command line.
+- **performance**: Now you can test you system perfromance of you laptop and know what tasks are able to handel by your laptop.
 
 ## Usage
 Run the program from the command prompt with the following syntax:
