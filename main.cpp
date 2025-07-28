@@ -243,10 +243,8 @@ int main(int argc, char *argv[]) {
             return 1;
         }
     } else {
-        return 0; 
+        usage(argv[0]);
     }
-    
- 
 
     if (argc < 2) {
         usage(argv[0]);
