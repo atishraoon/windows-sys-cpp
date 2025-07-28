@@ -68,8 +68,7 @@ sys [command] [arguments]
   - performance command 
 
 ## upcoming update 
-- encrypt or decrypt file and folders .
-- not need to create file data.dat file manully. 
+- encrypt or decrypt file and folders . 
 
 ## License
 This project is licensed under the **MIT License**.
