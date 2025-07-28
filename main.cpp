@@ -5,8 +5,10 @@
 #include <windows.h>  
 #include <regex>   
 #include <sstream> 
+#include <filesystem>
 
 using namespace std;
+namespace fs = std::filesystem;
 
 // -------------------------------------------- usage command -------------------------
 
@@ -227,6 +229,25 @@ void change_password() {
 // --------------------------------------- main ---------------------------------------
 
 int main(int argc, char *argv[]) {
+
+    const std::string filename = "data.dat";
+    
+    if (!fs::exists(filename)) {
+        cout << "File not found: " << filename << endl;
+        
+        std::ofstream newFile(filename);
+        if (newFile) {
+            cout << "Created new file: " << filename << endl;
+        } else {
+            cerr << "Error: Failed to create file" << endl;
+            return 1;
+        }
+    } else {
+        return 0; 
+    }
+    
+ 
+
     if (argc < 2) {
         usage(argv[0]);
     }
