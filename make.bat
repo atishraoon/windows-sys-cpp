@@ -1,2 +1,2 @@
-g++ main.cpp -o main.exe
+g++ main.cpp -o sys.exe
 main.exe

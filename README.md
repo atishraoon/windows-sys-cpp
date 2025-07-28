@@ -55,6 +55,11 @@ sys [command] [arguments]
 2. Compile the program using a C++ compiler (MinGW/GCC/MSVC):
    ```
    g++ main.cpp -o sys.exe
+
+   #or run
+
+   make.bat
+
    ```
 3. Run the executable in the command prompt:
    ```
